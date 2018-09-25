@@ -8,26 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		580690AE215A640B00DD90FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 580690AD215A640B00DD90FC /* AppDelegate.m */; };
-		580690B1215A640B00DD90FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 580690B0215A640B00DD90FC /* ViewController.m */; };
 		580690B4215A640B00DD90FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 580690B2215A640B00DD90FC /* Main.storyboard */; };
 		580690B7215A640B00DD90FC /* JJDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 580690B5215A640B00DD90FC /* JJDataBase.xcdatamodeld */; };
 		580690B9215A640D00DD90FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 580690B8215A640D00DD90FC /* Assets.xcassets */; };
 		580690BC215A640D00DD90FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 580690BA215A640D00DD90FC /* LaunchScreen.storyboard */; };
 		580690BF215A640D00DD90FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 580690BE215A640D00DD90FC /* main.m */; };
+		580690C7215A667400DD90FC /* SQLiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 580690C6215A667400DD90FC /* SQLiteViewController.m */; };
+		580690CA215A668400DD90FC /* CoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 580690C9215A668400DD90FC /* CoreDataViewController.m */; };
+		580690CD215A68C500DD90FC /* database_1.ico in Resources */ = {isa = PBXBuildFile; fileRef = 580690CB215A68C500DD90FC /* database_1.ico */; };
+		580690CE215A68C500DD90FC /* database_3.ico in Resources */ = {isa = PBXBuildFile; fileRef = 580690CC215A68C500DD90FC /* database_3.ico */; };
+		580690DB215A7E3D00DD90FC /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 580690DA215A7E3D00DD90FC /* UIView+Layout.m */; };
+		580690DE215A7EE900DD90FC /* UIScreen+Adaptive.m in Sources */ = {isa = PBXBuildFile; fileRef = 580690DD215A7EE900DD90FC /* UIScreen+Adaptive.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		580690A9215A640B00DD90FC /* JJDataBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJDataBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		580690AC215A640B00DD90FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		580690AD215A640B00DD90FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		580690AF215A640B00DD90FC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		580690B0215A640B00DD90FC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		580690B3215A640B00DD90FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		580690B6215A640B00DD90FC /* JJDataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JJDataBase.xcdatamodel; sourceTree = "<group>"; };
 		580690B8215A640D00DD90FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		580690BB215A640D00DD90FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		580690BD215A640D00DD90FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		580690BE215A640D00DD90FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		580690C5215A667400DD90FC /* SQLiteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteViewController.h; sourceTree = "<group>"; };
+		580690C6215A667400DD90FC /* SQLiteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLiteViewController.m; sourceTree = "<group>"; };
+		580690C8215A668400DD90FC /* CoreDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataViewController.h; sourceTree = "<group>"; };
+		580690C9215A668400DD90FC /* CoreDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataViewController.m; sourceTree = "<group>"; };
+		580690CB215A68C500DD90FC /* database_1.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = database_1.ico; sourceTree = "<group>"; };
+		580690CC215A68C500DD90FC /* database_3.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = database_3.ico; sourceTree = "<group>"; };
+		580690D9215A7E3D00DD90FC /* UIView+Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		580690DA215A7E3D00DD90FC /* UIView+Layout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		580690DC215A7EE900DD90FC /* UIScreen+Adaptive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Adaptive.h"; sourceTree = "<group>"; };
+		580690DD215A7EE900DD90FC /* UIScreen+Adaptive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Adaptive.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +73,15 @@
 		580690AB215A640B00DD90FC /* JJDataBase */ = {
 			isa = PBXGroup;
 			children = (
+				580690CF215A7C7900DD90FC /* Layout */,
+				580690CB215A68C500DD90FC /* database_1.ico */,
+				580690CC215A68C500DD90FC /* database_3.ico */,
 				580690AC215A640B00DD90FC /* AppDelegate.h */,
 				580690AD215A640B00DD90FC /* AppDelegate.m */,
-				580690AF215A640B00DD90FC /* ViewController.h */,
-				580690B0215A640B00DD90FC /* ViewController.m */,
+				580690C5215A667400DD90FC /* SQLiteViewController.h */,
+				580690C6215A667400DD90FC /* SQLiteViewController.m */,
+				580690C8215A668400DD90FC /* CoreDataViewController.h */,
+				580690C9215A668400DD90FC /* CoreDataViewController.m */,
 				580690B2215A640B00DD90FC /* Main.storyboard */,
 				580690B8215A640D00DD90FC /* Assets.xcassets */,
 				580690BA215A640D00DD90FC /* LaunchScreen.storyboard */,
@@ -72,6 +90,17 @@
 				580690B5215A640B00DD90FC /* JJDataBase.xcdatamodeld */,
 			);
 			path = JJDataBase;
+			sourceTree = "<group>";
+		};
+		580690CF215A7C7900DD90FC /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				580690D9215A7E3D00DD90FC /* UIView+Layout.h */,
+				580690DA215A7E3D00DD90FC /* UIView+Layout.m */,
+				580690DC215A7EE900DD90FC /* UIScreen+Adaptive.h */,
+				580690DD215A7EE900DD90FC /* UIScreen+Adaptive.m */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +160,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				580690CD215A68C500DD90FC /* database_1.ico in Resources */,
 				580690BC215A640D00DD90FC /* LaunchScreen.storyboard in Resources */,
 				580690B9215A640D00DD90FC /* Assets.xcassets in Resources */,
+				580690CE215A68C500DD90FC /* database_3.ico in Resources */,
 				580690B4215A640B00DD90FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,10 +175,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				580690B1215A640B00DD90FC /* ViewController.m in Sources */,
+				580690C7215A667400DD90FC /* SQLiteViewController.m in Sources */,
 				580690AE215A640B00DD90FC /* AppDelegate.m in Sources */,
 				580690BF215A640D00DD90FC /* main.m in Sources */,
+				580690DB215A7E3D00DD90FC /* UIView+Layout.m in Sources */,
 				580690B7215A640B00DD90FC /* JJDataBase.xcdatamodeld in Sources */,
+				580690DE215A7EE900DD90FC /* UIScreen+Adaptive.m in Sources */,
+				580690CA215A668400DD90FC /* CoreDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

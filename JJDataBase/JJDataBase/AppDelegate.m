@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "SQLiteViewController.h"
+#import "CoreDataViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +18,37 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    SQLiteViewController *sqlVC = [[SQLiteViewController alloc] init];
+    
+    
+    UIImage *image1 = [self resizeImage:@"database_1.ico"];
+    UIImage *image2 = [self resizeImage:@"database_3.ico"];
+    
+    sqlVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"SQLite" image:image1 selectedImage:image1];
+    CoreDataViewController *coreDataVC = [[CoreDataViewController alloc] init];
+    coreDataVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"CoreData" image:image2 selectedImage:image2];
+    
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    tabBarVC.viewControllers = @[sqlVC, coreDataVC];
+
+    
+    self.window.rootViewController = tabBarVC;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
+}
+
+- (UIImage *)resizeImage:(NSString *)imageName {
+    UIImage *image = [UIImage imageNamed:imageName];
+    CGSize size = CGSizeMake(35, 35);
+    UIGraphicsBeginImageContext(size);
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
 }
 
 

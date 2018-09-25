@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CoreDataViewController.h
 //  JJDataBase
 //
 //  Created by 刘佳杰 on 2018/9/25.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CoreDataViewController : UIViewController
 
 @end
-
