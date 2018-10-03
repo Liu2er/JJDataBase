@@ -9,19 +9,21 @@
 #import "SQLiteViewController.h"
 #import "UIView+Layout.h"
 #import "UIScreen+Adaptive.h"
+#import "DataBaseModel.h"
 #import <sqlite3.h>
 
 static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCellIdentifier";
 
-@interface SQLiteViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface SQLiteViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (nonatomic, strong) UITextField *nameField;
 @property (nonatomic, strong) UITextField *priceField;
 @property (nonatomic, strong) UIButton *addBtn;
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UISearchBar *searchBar;
 
-@property (nonatomic, strong) NSMutableArray *dataSource;
+@property (nonatomic, strong) NSMutableArray <DataBaseModel *> *dataSource;
 @property (nonatomic, assign) sqlite3 *sqlite;
 
 @end
@@ -61,6 +63,13 @@ static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCell
         tableView;
     });
     
+    // 增加搜索框
+    UISearchBar *searchBar = [[UISearchBar alloc] init];
+    searchBar.frame = CGRectMake(0, 0, 320, 44);
+    searchBar.delegate = self;
+    self.searchBar = searchBar;
+    self.tableView.tableHeaderView = searchBar;
+    
     self.view.backgroundColor = [UIColor redColor];
     
     
@@ -78,6 +87,7 @@ static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCell
             NSLog(@"创表失败：%s", errmsg);
         } else {
             NSLog(@"创表成功");
+            [self searchBar:self.searchBar textDidChange:@""];
         }
         
     } else {
@@ -92,18 +102,45 @@ static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCell
     if (errmsg) {
         NSLog(@"插入失败： %s", errmsg);
     } else {
-        [self.dataSource addObject:[NSString stringWithFormat:@"%@: %.1f", self.nameField.text, self.priceField.text.doubleValue]];
+        DataBaseModel *model = [DataBaseModel new];
+        model.name = self.nameField.text;
+        model.price = self.priceField.text.doubleValue;
+        [self.dataSource addObject:model];
         [self.tableView reloadData];
         [self.nameField resignFirstResponder];
         [self.priceField resignFirstResponder];
     }
 }
 
-- (NSMutableArray *)dataSource {
+- (NSMutableArray<DataBaseModel *> *)dataSource {
     if (!_dataSource) {
         _dataSource = [NSMutableArray new];
     }
     return _dataSource;
+}
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    [self.dataSource removeAllObjects];
+    
+    NSString *sql = [NSString stringWithFormat:@"SELECT name,price FROM t_shop WHERE name LIKE '%%%@%%' OR  price LIKE '%%%@%%' ;", searchText, searchText];
+    // ppStmt是用来取出查询结果的
+    sqlite3_stmt *ppStmt = NULL;
+    OSStatus status = sqlite3_prepare_v2(self.sqlite, sql.UTF8String, -1, &ppStmt, NULL);
+    if (status == SQLITE_OK) { // 准备成功 -- SQL语句正确
+        while (sqlite3_step(ppStmt) == SQLITE_ROW) { // 成功取出一条数据
+            const unsigned char *name = sqlite3_column_text(ppStmt, 0);
+            double price = sqlite3_column_double(ppStmt, 1);
+            
+            DataBaseModel *model = [DataBaseModel new];
+            model.name = [NSString stringWithUTF8String:(const char * _Nonnull)name];
+            model.price = price;
+            [self.dataSource addObject:model];
+        }
+    }
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -121,9 +158,9 @@ static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCell
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kSQLCellIdentifier];
     }
-    NSString *data = self.dataSource[indexPath.row];
-    cell.textLabel.text = [[data componentsSeparatedByString:@":"] firstObject];
-    cell.detailTextLabel.text = [[data componentsSeparatedByString:@": "] lastObject];
+    DataBaseModel *model = self.dataSource[indexPath.row];
+    cell.textLabel.text = model.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%f", model.price];
     return cell;
 }
 

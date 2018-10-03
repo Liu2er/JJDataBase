@@ -19,6 +19,7 @@
 		580690CE215A68C500DD90FC /* database_3.ico in Resources */ = {isa = PBXBuildFile; fileRef = 580690CC215A68C500DD90FC /* database_3.ico */; };
 		580690DB215A7E3D00DD90FC /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 580690DA215A7E3D00DD90FC /* UIView+Layout.m */; };
 		580690DE215A7EE900DD90FC /* UIScreen+Adaptive.m in Sources */ = {isa = PBXBuildFile; fileRef = 580690DD215A7EE900DD90FC /* UIScreen+Adaptive.m */; };
+		581740862164B306008290FF /* DataBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740852164B306008290FF /* DataBaseModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		580690DA215A7E3D00DD90FC /* UIView+Layout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		580690DC215A7EE900DD90FC /* UIScreen+Adaptive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Adaptive.h"; sourceTree = "<group>"; };
 		580690DD215A7EE900DD90FC /* UIScreen+Adaptive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Adaptive.m"; sourceTree = "<group>"; };
+		581740842164B306008290FF /* DataBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseModel.h; sourceTree = "<group>"; };
+		581740852164B306008290FF /* DataBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				580690BD215A640D00DD90FC /* Info.plist */,
 				580690BE215A640D00DD90FC /* main.m */,
 				580690B5215A640B00DD90FC /* JJDataBase.xcdatamodeld */,
+				581740842164B306008290FF /* DataBaseModel.h */,
+				581740852164B306008290FF /* DataBaseModel.m */,
 			);
 			path = JJDataBase;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				581740862164B306008290FF /* DataBaseModel.m in Sources */,
 				580690C7215A667400DD90FC /* SQLiteViewController.m in Sources */,
 				580690AE215A640B00DD90FC /* AppDelegate.m in Sources */,
 				580690BF215A640D00DD90FC /* main.m in Sources */,
