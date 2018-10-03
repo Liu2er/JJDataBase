@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SQLiteViewController.h"
+#import "FMDBViewController.h"
 #import "CoreDataViewController.h"
 
 @interface AppDelegate ()
@@ -20,19 +21,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    SQLiteViewController *sqlVC = [[SQLiteViewController alloc] init];
-    
-    
     UIImage *image1 = [self resizeImage:@"database_1.ico"];
     UIImage *image2 = [self resizeImage:@"database_3.ico"];
     
+    SQLiteViewController *sqlVC = [[SQLiteViewController alloc] init];
     sqlVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"SQLite" image:image1 selectedImage:image1];
+    
+    FMDBViewController *fmdbVC = [[FMDBViewController alloc] init];
+    fmdbVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"FMDB" image:image2 selectedImage:image2];
+    
     CoreDataViewController *coreDataVC = [[CoreDataViewController alloc] init];
     coreDataVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"CoreData" image:image2 selectedImage:image2];
     
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
-    tabBarVC.viewControllers = @[sqlVC, coreDataVC];
-
+    tabBarVC.viewControllers = @[sqlVC, fmdbVC, coreDataVC];
     
     self.window.rootViewController = tabBarVC;
     

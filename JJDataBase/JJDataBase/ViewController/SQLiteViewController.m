@@ -14,7 +14,6 @@
 @interface SQLiteViewController ()
 
 @property (nonatomic, strong) DataBaseView *baseView;
-
 @property (nonatomic, strong) NSMutableArray <DataBaseModel *> *dataSource;
 @property (nonatomic, assign) sqlite3 *sqlite;
 
@@ -30,6 +29,7 @@
 
 - (void)buildBaseView {
     self.baseView = [[DataBaseView alloc] initWithFrame:self.view.bounds];
+    self.baseView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:self.baseView];
     
     __weak typeof(self) weakSelf = self;
