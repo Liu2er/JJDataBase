@@ -20,6 +20,7 @@
 		580690DB215A7E3D00DD90FC /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 580690DA215A7E3D00DD90FC /* UIView+Layout.m */; };
 		580690DE215A7EE900DD90FC /* UIScreen+Adaptive.m in Sources */ = {isa = PBXBuildFile; fileRef = 580690DD215A7EE900DD90FC /* UIScreen+Adaptive.m */; };
 		581740862164B306008290FF /* DataBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740852164B306008290FF /* DataBaseModel.m */; };
+		581740892164B6C9008290FF /* DataBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740882164B6C9008290FF /* DataBaseView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		580690DD215A7EE900DD90FC /* UIScreen+Adaptive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Adaptive.m"; sourceTree = "<group>"; };
 		581740842164B306008290FF /* DataBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseModel.h; sourceTree = "<group>"; };
 		581740852164B306008290FF /* DataBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseModel.m; sourceTree = "<group>"; };
+		581740872164B6C9008290FF /* DataBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseView.h; sourceTree = "<group>"; };
+		581740882164B6C9008290FF /* DataBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				580690B5215A640B00DD90FC /* JJDataBase.xcdatamodeld */,
 				581740842164B306008290FF /* DataBaseModel.h */,
 				581740852164B306008290FF /* DataBaseModel.m */,
+				581740872164B6C9008290FF /* DataBaseView.h */,
+				581740882164B6C9008290FF /* DataBaseView.m */,
 			);
 			path = JJDataBase;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				580690BF215A640D00DD90FC /* main.m in Sources */,
 				580690DB215A7E3D00DD90FC /* UIView+Layout.m in Sources */,
 				580690B7215A640B00DD90FC /* JJDataBase.xcdatamodeld in Sources */,
+				581740892164B6C9008290FF /* DataBaseView.m in Sources */,
 				580690DE215A7EE900DD90FC /* UIScreen+Adaptive.m in Sources */,
 				580690CA215A668400DD90FC /* CoreDataViewController.m in Sources */,
 			);
