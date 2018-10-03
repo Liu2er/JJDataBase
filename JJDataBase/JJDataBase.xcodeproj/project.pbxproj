@@ -79,25 +79,20 @@
 		580690AB215A640B00DD90FC /* JJDataBase */ = {
 			isa = PBXGroup;
 			children = (
+				580690AC215A640B00DD90FC /* AppDelegate.h */,
+				580690AD215A640B00DD90FC /* AppDelegate.m */,
+				5817408C2164CB5B008290FF /* ViewController */,
+				5817408B2164CB3F008290FF /* Model */,
+				5817408A2164CB37008290FF /* View */,
 				580690CF215A7C7900DD90FC /* Layout */,
 				580690CB215A68C500DD90FC /* database_1.ico */,
 				580690CC215A68C500DD90FC /* database_3.ico */,
-				580690AC215A640B00DD90FC /* AppDelegate.h */,
-				580690AD215A640B00DD90FC /* AppDelegate.m */,
-				580690C5215A667400DD90FC /* SQLiteViewController.h */,
-				580690C6215A667400DD90FC /* SQLiteViewController.m */,
-				580690C8215A668400DD90FC /* CoreDataViewController.h */,
-				580690C9215A668400DD90FC /* CoreDataViewController.m */,
 				580690B2215A640B00DD90FC /* Main.storyboard */,
 				580690B8215A640D00DD90FC /* Assets.xcassets */,
 				580690BA215A640D00DD90FC /* LaunchScreen.storyboard */,
 				580690BD215A640D00DD90FC /* Info.plist */,
 				580690BE215A640D00DD90FC /* main.m */,
 				580690B5215A640B00DD90FC /* JJDataBase.xcdatamodeld */,
-				581740842164B306008290FF /* DataBaseModel.h */,
-				581740852164B306008290FF /* DataBaseModel.m */,
-				581740872164B6C9008290FF /* DataBaseView.h */,
-				581740882164B6C9008290FF /* DataBaseView.m */,
 			);
 			path = JJDataBase;
 			sourceTree = "<group>";
@@ -111,6 +106,35 @@
 				580690DD215A7EE900DD90FC /* UIScreen+Adaptive.m */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		5817408A2164CB37008290FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				581740872164B6C9008290FF /* DataBaseView.h */,
+				581740882164B6C9008290FF /* DataBaseView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5817408B2164CB3F008290FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				581740842164B306008290FF /* DataBaseModel.h */,
+				581740852164B306008290FF /* DataBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5817408C2164CB5B008290FF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				580690C5215A667400DD90FC /* SQLiteViewController.h */,
+				580690C6215A667400DD90FC /* SQLiteViewController.m */,
+				580690C8215A668400DD90FC /* CoreDataViewController.h */,
+				580690C9215A668400DD90FC /* CoreDataViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
