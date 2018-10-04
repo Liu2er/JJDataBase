@@ -29,9 +29,12 @@
 		581740D42164D590008290FF /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740D32164D590008290FF /* FMDBViewController.m */; };
 		581740E12164E319008290FF /* JJShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740E02164E319008290FF /* JJShop.m */; };
 		581740E42165CB5B008290FF /* DataBaseAutoLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740E32165CB5B008290FF /* DataBaseAutoLayoutView.m */; };
+		905DF95018E439E2F293C638 /* libPods-JJDataBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B62A88DE700AD39202B11318 /* libPods-JJDataBase.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05705E51DB0349EEDE75E375 /* Pods-JJDataBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJDataBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JJDataBase/Pods-JJDataBase.debug.xcconfig"; sourceTree = "<group>"; };
+		13CE81B33DD8B54F60935013 /* Pods-JJDataBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJDataBase.release.xcconfig"; path = "Pods/Target Support Files/Pods-JJDataBase/Pods-JJDataBase.release.xcconfig"; sourceTree = "<group>"; };
 		580690A9215A640B00DD90FC /* JJDataBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJDataBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		580690AC215A640B00DD90FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		580690AD215A640B00DD90FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 		581740E02164E319008290FF /* JJShop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJShop.m; sourceTree = "<group>"; };
 		581740E22165CB5B008290FF /* DataBaseAutoLayoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseAutoLayoutView.h; sourceTree = "<group>"; };
 		581740E32165CB5B008290FF /* DataBaseAutoLayoutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseAutoLayoutView.m; sourceTree = "<group>"; };
+		B62A88DE700AD39202B11318 /* libPods-JJDataBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JJDataBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,17 +83,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				905DF95018E439E2F293C638 /* libPods-JJDataBase.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		101B960A8C17A4766E21AC7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B62A88DE700AD39202B11318 /* libPods-JJDataBase.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		580690A0215A640B00DD90FC = {
 			isa = PBXGroup;
 			children = (
 				580690AB215A640B00DD90FC /* JJDataBase */,
 				580690AA215A640B00DD90FC /* Products */,
+				DC2D55210FDC61523ABEE7F6 /* Pods */,
+				101B960A8C17A4766E21AC7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,6 +202,15 @@
 			path = fmdb;
 			sourceTree = "<group>";
 		};
+		DC2D55210FDC61523ABEE7F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05705E51DB0349EEDE75E375 /* Pods-JJDataBase.debug.xcconfig */,
+				13CE81B33DD8B54F60935013 /* Pods-JJDataBase.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 580690C2215A640D00DD90FC /* Build configuration list for PBXNativeTarget "JJDataBase" */;
 			buildPhases = (
+				DF8517BACDDD57D3186F51DF /* [CP] Check Pods Manifest.lock */,
 				580690A5215A640B00DD90FC /* Sources */,
 				580690A6215A640B00DD90FC /* Frameworks */,
 				580690A7215A640B00DD90FC /* Resources */,
+				EB93AD218980F008EC241361 /* [CP] Embed Pods Frameworks */,
+				D6282BDDB3304D13E7368075 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +280,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D6282BDDB3304D13E7368075 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JJDataBase/Pods-JJDataBase-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF8517BACDDD57D3186F51DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JJDataBase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB93AD218980F008EC241361 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JJDataBase/Pods-JJDataBase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		580690A5215A640B00DD90FC /* Sources */ = {
@@ -413,6 +491,7 @@
 		};
 		580690C3215A640D00DD90FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05705E51DB0349EEDE75E375 /* Pods-JJDataBase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -430,6 +509,7 @@
 		};
 		580690C4215A640D00DD90FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13CE81B33DD8B54F60935013 /* Pods-JJDataBase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
