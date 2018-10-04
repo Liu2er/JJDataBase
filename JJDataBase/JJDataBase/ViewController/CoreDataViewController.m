@@ -7,13 +7,13 @@
 //
 
 #import "CoreDataViewController.h"
-#import "DataBaseView.h"
+#import "DataBaseMasonryView.h"
 #import "JJShop.h"
 #import <CoreData/CoreData.h>
 
 @interface CoreDataViewController ()
 
-@property (nonatomic, strong) DataBaseView *baseView;
+@property (nonatomic, strong) DataBaseMasonryView *baseView;
 @property (nonatomic, strong) NSMutableArray <JJShop *> *dataSource;
 @property (nonatomic, strong) NSManagedObjectContext *context;
 
@@ -29,7 +29,7 @@
 }
 
 - (void)buildBaseView {
-    self.baseView = [[DataBaseView alloc] initWithFrame:self.view.bounds];
+    self.baseView = [[DataBaseMasonryView alloc] initWithFrame:self.view.bounds];
     self.baseView.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.baseView];
     

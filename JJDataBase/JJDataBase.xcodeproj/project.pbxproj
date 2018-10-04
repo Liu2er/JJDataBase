@@ -29,6 +29,7 @@
 		581740D42164D590008290FF /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740D32164D590008290FF /* FMDBViewController.m */; };
 		581740E12164E319008290FF /* JJShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740E02164E319008290FF /* JJShop.m */; };
 		581740E42165CB5B008290FF /* DataBaseAutoLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740E32165CB5B008290FF /* DataBaseAutoLayoutView.m */; };
+		5850BC04216605E1007CF44B /* DataBaseMasonryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850BC03216605E1007CF44B /* DataBaseMasonryView.m */; };
 		905DF95018E439E2F293C638 /* libPods-JJDataBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B62A88DE700AD39202B11318 /* libPods-JJDataBase.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,8 @@
 		581740E02164E319008290FF /* JJShop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJShop.m; sourceTree = "<group>"; };
 		581740E22165CB5B008290FF /* DataBaseAutoLayoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseAutoLayoutView.h; sourceTree = "<group>"; };
 		581740E32165CB5B008290FF /* DataBaseAutoLayoutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseAutoLayoutView.m; sourceTree = "<group>"; };
+		5850BC02216605E1007CF44B /* DataBaseMasonryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseMasonryView.h; sourceTree = "<group>"; };
+		5850BC03216605E1007CF44B /* DataBaseMasonryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseMasonryView.m; sourceTree = "<group>"; };
 		B62A88DE700AD39202B11318 /* libPods-JJDataBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JJDataBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -156,6 +159,8 @@
 				581740882164B6C9008290FF /* DataBaseView.m */,
 				581740E22165CB5B008290FF /* DataBaseAutoLayoutView.h */,
 				581740E32165CB5B008290FF /* DataBaseAutoLayoutView.m */,
+				5850BC02216605E1007CF44B /* DataBaseMasonryView.h */,
+				5850BC03216605E1007CF44B /* DataBaseMasonryView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 				580690BF215A640D00DD90FC /* main.m in Sources */,
 				580690DB215A7E3D00DD90FC /* UIView+Layout.m in Sources */,
 				581740CC2164CF26008290FF /* FMDatabaseQueue.m in Sources */,
+				5850BC04216605E1007CF44B /* DataBaseMasonryView.m in Sources */,
 				580690B7215A640B00DD90FC /* JJDataBase.xcdatamodeld in Sources */,
 				581740CD2164CF26008290FF /* FMDatabaseAdditions.m in Sources */,
 				581740892164B6C9008290FF /* DataBaseView.m in Sources */,
