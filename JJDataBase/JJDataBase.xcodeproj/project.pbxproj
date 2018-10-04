@@ -28,6 +28,7 @@
 		581740D02164CF26008290FF /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740CA2164CF26008290FF /* FMResultSet.m */; };
 		581740D42164D590008290FF /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740D32164D590008290FF /* FMDBViewController.m */; };
 		581740E12164E319008290FF /* JJShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740E02164E319008290FF /* JJShop.m */; };
+		581740E42165CB5B008290FF /* DataBaseAutoLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740E32165CB5B008290FF /* DataBaseAutoLayoutView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,8 @@
 		581740D32164D590008290FF /* FMDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBViewController.m; sourceTree = "<group>"; };
 		581740DF2164E319008290FF /* JJShop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJShop.h; sourceTree = "<group>"; };
 		581740E02164E319008290FF /* JJShop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJShop.m; sourceTree = "<group>"; };
+		581740E22165CB5B008290FF /* DataBaseAutoLayoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseAutoLayoutView.h; sourceTree = "<group>"; };
+		581740E32165CB5B008290FF /* DataBaseAutoLayoutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseAutoLayoutView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 			children = (
 				581740872164B6C9008290FF /* DataBaseView.h */,
 				581740882164B6C9008290FF /* DataBaseView.m */,
+				581740E22165CB5B008290FF /* DataBaseAutoLayoutView.h */,
+				581740E32165CB5B008290FF /* DataBaseAutoLayoutView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				581740E42165CB5B008290FF /* DataBaseAutoLayoutView.m in Sources */,
 				581740862164B306008290FF /* DataBaseModel.m in Sources */,
 				581740E12164E319008290FF /* JJShop.m in Sources */,
 				580690C7215A667400DD90FC /* SQLiteViewController.m in Sources */,

@@ -7,13 +7,13 @@
 //
 
 #import "FMDBViewController.h"
-#import "DataBaseView.h"
+#import "DataBaseAutoLayoutView.h"
 #import "DataBaseModel.h"
 #import "FMDB.h"
 
 @interface FMDBViewController ()
 
-@property (nonatomic, strong) DataBaseView *baseView;
+@property (nonatomic, strong) DataBaseAutoLayoutView *baseView;
 @property (nonatomic, strong) NSMutableArray <DataBaseModel *> *dataSource;
 @property (nonatomic, strong) FMDatabase *db;
 
@@ -28,7 +28,7 @@
 }
 
 - (void)buildBaseView {
-    self.baseView = [[DataBaseView alloc] initWithFrame:self.view.bounds];
+    self.baseView = [[DataBaseAutoLayoutView alloc] initWithFrame:self.view.bounds];
     self.baseView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:self.baseView];
     
