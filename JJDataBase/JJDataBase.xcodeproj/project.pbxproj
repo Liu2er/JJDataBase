@@ -27,6 +27,7 @@
 		581740CF2164CF26008290FF /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740C92164CF26008290FF /* FMDatabasePool.m */; };
 		581740D02164CF26008290FF /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740CA2164CF26008290FF /* FMResultSet.m */; };
 		581740D42164D590008290FF /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740D32164D590008290FF /* FMDBViewController.m */; };
+		581740E12164E319008290FF /* JJShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 581740E02164E319008290FF /* JJShop.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,8 @@
 		581740CA2164CF26008290FF /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		581740D22164D590008290FF /* FMDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBViewController.h; sourceTree = "<group>"; };
 		581740D32164D590008290FF /* FMDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBViewController.m; sourceTree = "<group>"; };
+		581740DF2164E319008290FF /* JJShop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJShop.h; sourceTree = "<group>"; };
+		581740E02164E319008290FF /* JJShop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJShop.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 			children = (
 				581740842164B306008290FF /* DataBaseModel.h */,
 				581740852164B306008290FF /* DataBaseModel.m */,
+				581740DF2164E319008290FF /* JJShop.h */,
+				581740E02164E319008290FF /* JJShop.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				581740862164B306008290FF /* DataBaseModel.m in Sources */,
+				581740E12164E319008290FF /* JJShop.m in Sources */,
 				580690C7215A667400DD90FC /* SQLiteViewController.m in Sources */,
 				581740D02164CF26008290FF /* FMResultSet.m in Sources */,
 				581740CF2164CF26008290FF /* FMDatabasePool.m in Sources */,
