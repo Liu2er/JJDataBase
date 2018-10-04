@@ -37,6 +37,12 @@ static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCell
     return self;
 }
 
+/*
+ AutoLayout要点：
+ 1、设置view的translatesAutoresizingMaskIntoConstraints = NO；
+ 2、创建NSLayoutConstraint对象（constraintWithItem或VFL）；
+ 3、将创建好的NSLayoutConstraint对象add到view的父view上（注意）；
+ */
 - (void)buidupViews {
     _nameLabel = ({
         UILabel *nameLabel = [UILabel new];
@@ -52,8 +58,6 @@ static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCell
     NSLayoutConstraint *nameLabelHeight = [NSLayoutConstraint constraintWithItem:_nameLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:30];
     [self addConstraints:@[nameLabelLeft, nameLabelTop, nameLabelWidth, nameLabelHeight]];
     
-    
-    
     _nameField = ({
         UITextField *nameField = [UITextField new];
         nameField.backgroundColor = [UIColor whiteColor];
@@ -67,11 +71,9 @@ static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCell
         nameField;
     });
     
-    NSLayoutConstraint *nameFieldLeft = [NSLayoutConstraint constraintWithItem:_nameField attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:_nameLabel attribute:NSLayoutAttributeRight multiplier:1.0 constant:15];
     NSLayoutConstraint *nameFieldTop = [NSLayoutConstraint constraintWithItem:_nameField attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_nameLabel attribute:NSLayoutAttributeTop multiplier:1.0 constant:0];
-    NSLayoutConstraint *nameFieldWidth = [NSLayoutConstraint constraintWithItem:_nameField attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:200];
     NSLayoutConstraint *nameFieldHeight = [NSLayoutConstraint constraintWithItem:_nameField attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:30];
-    [self addConstraints:@[nameFieldLeft, nameFieldTop, nameFieldWidth, nameFieldHeight]];
+    [self addConstraints:@[nameFieldTop, nameFieldHeight]];
     
     _priceLabel = ({
         UILabel *priceLabel = [UILabel new];
@@ -107,9 +109,6 @@ static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCell
         priceField;
     });
     
-    
-
-    
     _addBtn = ({
         UIButton *addBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.nameField.right + 20, self.nameField.bottom - 17, 100, 40)];
         [addBtn setTitle:@"添加" forState:UIControlStateNormal];
@@ -122,11 +121,9 @@ static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCell
         [self addSubview:addBtn];
         
         addBtn.translatesAutoresizingMaskIntoConstraints = NO;
-        NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:addBtn attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:_nameField attribute:NSLayoutAttributeRight multiplier:1.0 constant:20];
         NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:addBtn attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_nameField attribute:NSLayoutAttributeTop multiplier:1.0 constant:15];
-        NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:addBtn attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:-20];
         NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:addBtn attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:_priceField attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-15];
-        [self addConstraints:@[left, top, right, bottom]];
+        [self addConstraints:@[top, bottom]];
         
         addBtn;
     });
@@ -154,6 +151,11 @@ static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCell
         _tableView.tableHeaderView = searchBar;
         searchBar;
     });
+    
+    // 用VFL语言添加约束
+    CGFloat nameFieldW = [UIScreen mainScreen].bounds.size.width - 20 - 35 - 15 - 20 - 70 - 20;
+    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[nameLabel(35)]-15-[nameField(nameFieldW)]-20-[addBtn(70)]-20-|" options:0 metrics:@{@"nameFieldW" : @(nameFieldW)} views:@{@"nameLabel" : _nameLabel, @"nameField" : _nameField, @"addBtn" : _addBtn}];
+    [self addConstraints:constraints];
 }
 
 - (void)insertDataAction {

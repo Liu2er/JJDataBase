@@ -14,6 +14,9 @@ static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCell
 
 @interface DataBaseView () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
+@property (nonatomic, strong) UILabel *nameLabel;
+@property (nonatomic, strong) UILabel *priceLabel;
+
 @property (nonatomic, strong) UITextField *nameField;
 @property (nonatomic, strong) UITextField *priceField;
 @property (nonatomic, strong) UIButton *addBtn;
@@ -35,8 +38,16 @@ static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCell
 }
 
 - (void)buidupViews {
+    _nameLabel = ({
+        UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 50, 35, 30)];
+        nameLabel.text = @"名字";
+        nameLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addSubview:nameLabel];
+        nameLabel;
+    });
+    
     _nameField = ({
-        UITextField *nameField = [[UITextField alloc] initWithFrame:CGRectMake(20, 50, 200, 30)];
+        UITextField *nameField = [[UITextField alloc] initWithFrame:CGRectMake(_nameLabel.right + 15, _nameLabel.top, 200, _nameLabel.height)];
         nameField.backgroundColor = [UIColor whiteColor];
         nameField.clearButtonMode = UITextFieldViewModeWhileEditing;
         nameField.placeholder = @"输入商品名字";
@@ -47,8 +58,16 @@ static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCell
         nameField;
     });
     
+    _priceLabel = ({
+        UILabel *priceLabel = [[UILabel alloc] initWithFrame:CGRectMake(_nameLabel.left, _nameLabel.bottom + 10, _nameLabel.width, _nameLabel.height)];
+        priceLabel.text = @"价格";
+        priceLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addSubview:priceLabel];
+        priceLabel;
+    });
+    
     _priceField = ({
-        UITextField *priceField = [[UITextField alloc] initWithFrame:CGRectMake(20, 90, 200, 30)];
+        UITextField *priceField = [[UITextField alloc] initWithFrame:CGRectMake(_nameField.left, _priceLabel.top, _nameField.width, _priceLabel.height)];
         priceField.backgroundColor = [UIColor whiteColor];
         priceField.clearButtonMode = UITextFieldViewModeAlways;
         priceField.placeholder = @"输入商品价格";
