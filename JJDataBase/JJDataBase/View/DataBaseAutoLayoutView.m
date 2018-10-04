@@ -52,10 +52,34 @@ static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCell
         nameLabel;
     });
     
-    NSLayoutConstraint *nameLabelLeft = [NSLayoutConstraint constraintWithItem:_nameLabel attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1.0 constant:20];
-    NSLayoutConstraint *nameLabelTop = [NSLayoutConstraint constraintWithItem:_nameLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:50];
-    NSLayoutConstraint *nameLabelWidth = [NSLayoutConstraint constraintWithItem:_nameLabel attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:35];
-    NSLayoutConstraint *nameLabelHeight = [NSLayoutConstraint constraintWithItem:_nameLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:30];
+    NSLayoutConstraint *nameLabelLeft = [NSLayoutConstraint constraintWithItem:_nameLabel
+                                                                     attribute:NSLayoutAttributeLeft
+                                                                     relatedBy:NSLayoutRelationEqual
+                                                                        toItem:self
+                                                                     attribute:NSLayoutAttributeLeft
+                                                                    multiplier:1.0
+                                                                      constant:20];
+    NSLayoutConstraint *nameLabelTop = [NSLayoutConstraint constraintWithItem:_nameLabel
+                                                                    attribute:NSLayoutAttributeTop
+                                                                    relatedBy:NSLayoutRelationEqual
+                                                                       toItem:self
+                                                                    attribute:NSLayoutAttributeTop
+                                                                   multiplier:1.0
+                                                                     constant:50];
+    NSLayoutConstraint *nameLabelWidth = [NSLayoutConstraint constraintWithItem:_nameLabel
+                                                                      attribute:NSLayoutAttributeWidth
+                                                                      relatedBy:NSLayoutRelationEqual
+                                                                         toItem:nil
+                                                                      attribute:NSLayoutAttributeNotAnAttribute
+                                                                     multiplier:1.0
+                                                                       constant:35];
+    NSLayoutConstraint *nameLabelHeight = [NSLayoutConstraint constraintWithItem:_nameLabel
+                                                                       attribute:NSLayoutAttributeHeight
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:nil
+                                                                       attribute:NSLayoutAttributeNotAnAttribute
+                                                                      multiplier:1.0
+                                                                        constant:30];
     [self addConstraints:@[nameLabelLeft, nameLabelTop, nameLabelWidth, nameLabelHeight]];
     
     _nameField = ({
@@ -110,7 +134,7 @@ static NSString * const kSQLCellIdentifier = @"SQLiteViewControllerTableViewCell
     });
     
     _addBtn = ({
-        UIButton *addBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.nameField.right + 20, self.nameField.bottom - 17, 100, 40)];
+        UIButton *addBtn = [[UIButton alloc] init];
         [addBtn setTitle:@"添加" forState:UIControlStateNormal];
         [addBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         [addBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
